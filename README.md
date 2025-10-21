@@ -71,10 +71,11 @@
 
 ### 3. 달력 기능
    - 날짜별로 아이템들을 기록할 수 있는 달력 기능 구현
+   - 달력 저장 및 조회, 수정, 삭제 기능
 
 ### 4. 아이템 기능
    - 해당 달력안에서 어떤 수입과 지출이 있었는지 등을 기록하는 세부 아이템 기능 구현 
-
+   - 아이템 저장 및 조회, 수정, 삭제 기능
 
 <br><br>
 
@@ -119,16 +120,6 @@
 
 ## 📝 API 명세
 
-<br>
-<details>
-<summary>
-  API 명세서 Swagger version
-</summary>
-  
-<img width="1304" height="4015" alt="accordswagger" src="https://github.com/user-attachments/assets/7173bfe9-f4e0-46d1-ace8-360e8976d0d9" />
-
-  
-</details>
 
 <br>
 

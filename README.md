@@ -52,58 +52,6 @@
 
 ---
 
-## 🌟 주요 기능
-
-<br>
-
-### 1. 달력 저장# 💡 개인 :대장부(Captain Book) 프로젝트
-
-<img width="350" height="350" alt="DaeJangBu-radius-logo" src="https://github.com/user-attachments/assets/cb7f16af-1c36-4f55-b2e9-54b7f24ff938" />
-
-<br><br><br>
-
-- 메인 페이지: https://.. (아직은 미배포 상태입니다.)
-
-<br><br>
-
----
-### 리포지터리 링크
-
-* **소개 링크 :** https://github.com/yoda-yoda/project5-captain-book-overview
-* **backend (spring) :** https://github.com/yoda-yoda/project5-captain-book-backend
-* **frontend (react) :** https://github.com/yoda-yoda/project5-captain-book-frontend
-
-<br><br>
-
----
-
-## 개요
-
-<br>
-
-
-# 5차 프로젝트 - **대장부(Captain Book) 개인프로젝트 (captain book project)**
-
-## 💡 개인 :대장부(Captain Book) 프로젝트
-
-<img width="350" height="350" alt="DaeJangBu-radius-logo" src="https://github.com/user-attachments/assets/cb7f16af-1c36-4f55-b2e9-54b7f24ff938" />
-
-<br>
-
-### 주제
-
-- 웹 가계부 어플리케이션을 구현하였습니다.
-
-<br>
-
-### 대장부(Captain Book)의 의미  
-- **대장부(Captain Book) =>** '대장부'란 단어는 '무언가를 기록하는 큰 장부', '크고 씩씩한 사람'이라는 뜻을 동시에 담고있어 차용하였습니다. <br> '대장부'를 영어로 'Captain Book' 으로 표현했습니다.
-
-
-
-<br><br>
-
----
 
 ## 🌟 주요 기능
 

@@ -23,7 +23,7 @@
 
 ## 개요
 
-[▲개요로 스크롤](#개요)
+
 
 <br><br>
 
@@ -93,12 +93,15 @@
 
 - ### 아키텍처
 
+<img width="1792" height="1063" alt="아키텍처-Captain-book" src="https://github.com/user-attachments/assets/24372ed2-f661-4327-8ec8-da16e0779c31" />
+
 
 <br><br><br>
 
 
 - ### **ERD(Spring)**
 
+<img width="1480" height="789" alt="DBerd" src="https://github.com/user-attachments/assets/839bb021-5658-4cfe-887f-910f6b846e42" />
 
 
 <br><br>
@@ -144,6 +147,6 @@
 
 </details>
 
-
+[▲개요로 스크롤](#개요)
 
 <br><br><br><br><br>

@@ -4,42 +4,59 @@
 
 <img width="350" height="350" alt="DaeJangBu-radius-logo" src="https://github.com/user-attachments/assets/cb7f16af-1c36-4f55-b2e9-54b7f24ff938" />
 
-<br><br><br>
-
-- 메인 페이지: https://.. (아직은 미배포 상태입니다.)
-
 <br><br>
 
+### 🔅 이 프로젝트에서 중점을 둔것
+- **(1) 혼자만의 힘** <br>
+이 프로젝트의 시작부터 끝까지 모든 과정을 최대한 혼자만의 힘으로 해결하도록 했습니다. <br>
+검색과 Ai를 활용할땐 문제를 최대한 제 스스로 이해하며 해결하려 노력했습니다. <br>
+왜냐하면 그 과정 자체가 저를 훈련시킬거라 생각했기 때문입니다.
+
+- **(2) 원리 이해 중시** <br>
+프로젝트 중 발생한 모든 문제, 궁금증, 해결은 그 원리부터 이해하도록 했습니다. <br>
+왜냐하면 이유를 모르고 넘어가는 과정은 명쾌하지않고 불편했기 때문입니다. 따라서 원리를 깊이있게 이해하려 노력했습니다. <br>
+
+- **(3) 다양한 기술 훈련** <br>
+가능한 다양한 기술과 까다로운 기술을 접하도록 했습니다. <br>
+예를들면 렌더링에선 타임리프와 리액트, 로그인에선 폼로그인과 OAuth, <br>
+데이터베이스에선 Redis, H2, MySQL, 시큐리티에선 세션 기반/CSRF 토큰과 JWT 등등 <br>
+1가지 기술뿐만 아니라 다양한 기술을 적용해보는 훈련을 했습니다. <br>
+리액트에서는 일부러 axios 라이브러리를 사용하지 않고 훈련을 위해 fetch만을 활용하였습니다. <br>
+왜냐하면 더 까다로운 기술을 먼저 접하거나 다양한 기술을 경험하면 그 이해와 활용의 폭이 넓어질거라 생각했기 때문입니다. <br><br>
+
+### 💻 메인페이지 
+: https://.. (아직은 미배포 상태입니다.) <br><br>
+
+### 📀 진행상태
+현재 75% 정도 완성된 상태이며 개발, 문서 업데이트를 진행중입니다. 
+
+<br>
+
 ---
+
 ### 리포지터리 링크
 
 * **소개 링크 :** https://github.com/yoda-yoda/project5-captain-book-overview
 * **backend (spring) :** https://github.com/yoda-yoda/project5-captain-book-backend
 * **frontend (react) :** https://github.com/yoda-yoda/project5-captain-book-frontend
 
-<br><br>
+<br>
 
 ---
 
 ## 개요
 
-# 5차 프로젝트 - **대장부(Captain Book) 개인프로젝트 (captain book project)**
-
-## 💡 개인 :대장부(Captain Book) 프로젝트
-
-<img width="350" height="350" alt="DaeJangBu-radius-logo" src="https://github.com/user-attachments/assets/cb7f16af-1c36-4f55-b2e9-54b7f24ff938" />
-
 <br>
 
-### 주제
+### 📜주제
 
 - 웹 가계부 어플리케이션을 구현하였습니다.
+- 현재 75% 정도 완성된 상태이며 개발, 문서 업데이트를 진행중입니다. 
 
 <br>
 
-### 대장부(Captain Book)의 의미  
+### 🔍 대장부(Captain Book)의 의미  
 - **대장부(Captain Book) =>** '대장부'란 단어는 '무언가를 기록하는 큰 장부', '크고 씩씩한 사람'이라는 뜻을 동시에 담고있어 차용하였습니다. <br> '대장부'를 영어로 'Captain Book' 으로 표현했습니다.
-
 
 
 <br><br>

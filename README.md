@@ -56,6 +56,16 @@ JDK 폴더의 'bin' 폴더 안에 **keytool.exe** 이라는 응용프로그램�
 
 **아래에서 해당되는 경우의 명령어를 복사하여, 터미널에 입력한다. 그러면 터미널이 열린 폴더에 (springTestKeyStore.p12) 파일이 생성될것이다.**
 
+
+<br>
+
+### (1) 터미널에서 'keytool -version' 명령어를 쳤을때 출력되는 경우(즉 bin폴더가 환경 변수(path)에 등록되어 있는 경우)
+
+```
+keytool -genkeypair -alias springTestKeyStore -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore springTestKeyStore.p12 -validity 3 -storepass 123123 -keypass 123123 -dname "CN=localhost, OU=Dev, O=MyCompany, L=Seoul, ST=Seoul, C=KR"
+```
+<br>
+
 <details>
 <summary> 참고: 해당 명령어의 뜻 살펴보기 (클릭) </summary>
 
@@ -130,18 +140,7 @@ C=KR: Country(국가)이다. 2자리 국가 코드(대한민국)를 의미한다
   
 </details>
 
-
-<br>
-<br>
-<br>
-
-### (1) 터미널에서 'keytool -version' 명령어를 쳤을때 출력되는 경우(즉 bin폴더가 환경 변수(path)에 등록되어 있는 경우)
-
-```
-keytool -genkeypair -alias springTestKeyStore -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore springTestKeyStore.p12 -validity 3 -storepass 123123 -keypass 123123 -dname "CN=localhost, OU=Dev, O=MyCompany, L=Seoul, ST=Seoul, C=KR"
-```
-
-<br><br>
+<br><br><br>
 
 이렇게 하면, 터미널이 열린 폴더에 (springTestKeyStore.p12) 파일이 생길것이다. <br>
 그 파일을 스프링의 resources 폴더에 놓으면 파일 준비는 끝난것이다.

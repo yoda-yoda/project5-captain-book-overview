@@ -28,7 +28,109 @@
 : https://.. (아직은 미배포 상태입니다.) <br><br>
 
 ### 📀 진행상태
-현재 75% 정도 완성된 상태이며 개발, 문서 업데이트를 진행중입니다. 
+현재 75% 정도 완성된 상태이며 개발, 문서 업데이트를 진행중입니다.
+
+### ⚙️ 현재 clone시 앱 구동에 필요한 환경 설정들
+
+1.밑의 코드를 복사 => 스프링의 resources 폴더에 application.yml 파일(없으면 생성 후)에 붙여넣기 
+
+
+```
+server:
+  # HTTPS 통신을 위한 설정. (일반적으로 8443 사용)
+  port: 8443
+  ssl:
+    # 만든 key 파일 설정
+    key-store: classpath:[바꾸기 자체인증서 파일이름].p12
+    key-store-type: PKCS12
+    # keytool 실행 시 입력했던 비밀번호
+    key-store-password: [바꾸기 자체인증서 만들때 입력한 비밀번호]
+    # keytool 실행 시 사용했던 alias
+    key-alias: [바꾸기 자체인증서 만들때 입력한 alias]
+
+spring:
+
+  profiles:
+    active: dev
+
+  redis:
+    host: localhost # 또는 Redis 서버 주소
+    port: 6379
+
+
+  datasource:
+
+    url: jdbc:mysql://localhost:[바꾸기 mysql이 실행중인 포트번호. 기본값은 3306]/[바꾸기 생성해놓은 데이터베이스 이름]
+    driver-class-name: [바꾸기 mysql 드라이버 경로. 기본값은 com.mysql.cj.jdbc.Driver]
+    username: [바꾸기 mysql 아이디]
+    password: [바꾸기 mysql 비밀번호]
+
+
+  sql:
+    init:
+      mode: always
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+      format_sql: true
+      use_sql_comments: true
+    show-sql: true
+    defer-datasource-initialization: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: [바꾸기 Google Cloud Console에서 발급받은 구글 OAuth2 client-id]
+            client-secret: [바꾸기 Google Cloud Console에서 발급받은 구글 OAuth2 client-secret]
+            scope:
+              - email
+              - profile
+
+
+
+  # 로깅확인용
+logging:
+  level:
+    org.springframework.jdbc.datasource.init.ScriptUtils: DEBUG
+
+    org.springframework.security.web.csrf: TRACE
+    org.springframework.security.web.authentication: DEBUG
+    org.springframework.security.web.access: DEBUG
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+cors:
+  allowed-origins: "https://localhost:3000"
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+cors:
+  allowed-origins: "https://captain-book"
+```
+
+2.위 내용에서 "[바꾸기 ...]" 부분의 설명을 확인후, 지우고 자신의 상황에 맞게 바꿔 적기 =>
+2-1.사용자 컴퓨터에 데이터베이스가 설치되어 있어야함. 위 yml 파일의 데이터베이스 부분의 예시는 MySQL의 예시이다. 
+2-2. 자체인증서인 (임의파일이름.p12) 파일을 스프링의 resources 폴더에 두고 yml파일에 적어주기.
+
+3.사용자 컴퓨터의 6379 포트에서 redis가 실행되고 있어야함.(Dokcer로 활용 가능)
+4.(선택) 구글 오아스 로그인 기능을 원할 경우 => 사용자가 Google Cloud Console에서, 구글 OAuth2 client-id와 client-secret을 발급받아 yml 파일에 적어주기.(안한다면 폼 로그인 기능만 사용 가능)
+
+
+
+
+
+
 
 <br>
 

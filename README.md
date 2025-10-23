@@ -23,12 +23,6 @@
 
 ## 개요
 
-
-
-<br><br>
-
-
-
 # 5차 프로젝트 - **대장부(Captain Book) 개인프로젝트 (captain book project)**
 
 ## 💡 개인 :대장부(Captain Book) 프로젝트
@@ -93,8 +87,7 @@
 
 - ### 아키텍처
 
-<img width="1792" height="1063" alt="아키텍처-Captain-book" src="https://github.com/user-attachments/assets/24372ed2-f661-4327-8ec8-da16e0779c31" />
-
+<img width="1792" height="1063" alt="최종아키텍처-captain-book" src="https://github.com/user-attachments/assets/66b3894a-2a79-4755-95f4-1e1a1cd18a32" />
 
 <br><br><br>
 
@@ -110,10 +103,50 @@
 
 - ### **플로우 차트**
 
+**(전체)**
+
+<img width="525" height="618" alt="flow-전체captain-book" src="https://github.com/user-attachments/assets/81803360-7e2e-4005-8852-c718555beaed" />
+
+<br><br>
+
+**(달력 기능)**
+<img width="1350" height="550" alt="flow-달력기능-captain-book" src="https://github.com/user-attachments/assets/78a7d579-04b0-4ac1-93ba-fd6d7edd2644" />
+
+<br><br>
+
+**(아이템 기능)**
+
+<img width="1348" height="552" alt="flow-아이템기능-captain-book" src="https://github.com/user-attachments/assets/ceae2b6d-3d46-4585-9d9f-330563c14e7b" />
+
+<br><br>
+
+**(로그인, 로그아웃 기능)**
+
+<img width="1353" height="447" alt="flow-로그인-로그아웃기능-captain-book" src="https://github.com/user-attachments/assets/2d924c11-6327-4f21-9a45-97c01f902c0d" />
 
 <br><br>
 
 - ### **활용 기술**
+
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="https://img.shields.io/badge/JAVA-a?style=for-the-badge&logo=JAVA&logoSize=auto&color=%23946951">
+  <img src="https://img.shields.io/badge/SPRING-a?style=for-the-badge&logo=spring&logoColor=white&logoSize=auto">
+  <img src="https://img.shields.io/badge/SECURITY-a?style=for-the-badge&logo=spring%20security&logoColor=white&logoSize=auto&color=%23419e5d">
+  <img src="https://img.shields.io/badge/JWT-a?style=for-the-badge&logo=jsonwebtokens&logoColor=white&logoSize=auto&color=%23be48c2">
+  <img src="https://img.shields.io/badge/DOCKER-a?style=for-the-badge&logo=docker&logoColor=white&logoSize=auto&color=%232496ED">
+  <img src="https://img.shields.io/badge/REDIS-a?style=for-the-badge&logo=redis&logoColor=white&logoSize=auto&color=%23FF4438">
+  <img src="https://img.shields.io/badge/MYSQL-a?style=for-the-badge&logo=MYSQL&logoColor=white&logoSize=auto&color=%234479A1">
+  <img src="https://img.shields.io/badge/REACT-a?style=for-the-badge&logo=react&logoColor=white&logoSize=auto&color=%2361DAFB">
+  <img src="https://img.shields.io/badge/ROUTER-a?style=for-the-badge&logo=reactrouter&logoColor=white&logoSize=auto&color=%23CA4245">
+  <img src="https://img.shields.io/badge/BOOTSTRAP-a?style=for-the-badge&logo=bootstrap&logoColor=white&logoSize=auto&color=%237952B3">
+  <img src="https://img.shields.io/badge/RECOIL-a?style=for-the-badge&logo=recoil&logoColor=white&logoSize=auto&color=%233578E5">
+  <img src="https://img.shields.io/badge/HTML5-a?style=for-the-badge&logo=html5&logoColor=white&logoSize=auto&color=%23E34F26">
+  <img src="https://img.shields.io/badge/CSS-a?style=for-the-badge&logo=css&logoColor=white&logoSize=auto&color=%23663399">
+  <img src="https://img.shields.io/badge/JAVASCRIPT-a?style=for-the-badge&logo=javascript&logoColor=white&logoSize=auto&color=%23F7DF1E">
+  <img src="https://img.shields.io/badge/GIT-a?style=for-the-badge&logo=GIT&logoColor=white&logoSize=auto&color=%23F05032">
+  <img src="https://img.shields.io/badge/GITHUB-a?style=for-the-badge&logo=GITHUB&logoColor=white&logoSize=auto&color=%23181717">
+</div>
 
 
 <br>

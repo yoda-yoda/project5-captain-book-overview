@@ -36,7 +36,9 @@
 <details>
 <summary> 현재 프로젝트 복사시 앱 구동에 필요한 환경 설정들 </summary>
 
-1.밑의 코드를 복사 => 스프링의 resources 폴더에 application.yml 파일(없으면 생성 후)에 붙여넣기  <br>
+<br><br>
+
+1.밑의 코드를 복사 => 스프링의 resources 폴더에 application.yml 파일에 (없으면 생성 후에) 우선 붙여넣기 <br>
 
 
 ```
@@ -45,12 +47,12 @@ server:
   port: 8443
   ssl:
     # 만든 key 파일 설정
-    key-store: classpath:[바꾸기 자체인증서 파일이름].p12
+    key-store: classpath:[바꾸기 자체인증서 파일이름. 예시: springTestKeyStore].p12
     key-store-type: PKCS12
     # keytool 실행 시 입력했던 비밀번호
-    key-store-password: [바꾸기 자체인증서 만들때 입력한 비밀번호]
+    key-store-password: [바꾸기 자체인증서 만들때 입력한 비밀번호. 예시: 123123]
     # keytool 실행 시 사용했던 alias
-    key-alias: [바꾸기 자체인증서 만들때 입력한 alias]
+    key-alias: [바꾸기 자체인증서 만들때 입력한 alias. 예시: springTestKeyStore]
 
 spring:
 
@@ -123,13 +125,95 @@ cors:
   allowed-origins: "https://captain-book"
 ```
 
-2.위 내용에서 "[바꾸기 ...]" 부분의 설명을 확인후, 지우고 자신의 상황에 맞게 바꿔 적기 => <br>
-2-1.사용자 컴퓨터에 데이터베이스가 설치되어 있어야함. 위 yml 파일의 데이터베이스 부분의 예시는 MySQL의 예시이다. <br>
-2-2. 자체인증서인 (임의파일이름.p12) 파일을 스프링의 resources 폴더에 두고 yml파일에 적어주기. <br>
-=> 자체인증서 하는법 : (쓰는중)
+2.위 yml 파일의 내용에서 "[바꾸기 ...]" 부분의 설명을 확인후, 지우고 자신의 상황에 맞게 바꿔 적기 <br>
+=>
+2-1.사용자 컴퓨터에 데이터베이스가 설치되어 있어야한다. 위 yml 파일의 데이터베이스 부분은 MySQL의 예시이다. <br>
+2-2. 자체인증서 (임의파일이름.p12) 파일을 스프링의 resources 폴더에 두고 yml파일에 적어주기. <br>
+=> 자체인증서를 직접 만들거나 이 깃허브 저장소에서 다운로드 받아 스프링의 resources 폴더에 넣으면 준비가 끝난다.
+<details>
+<summary> 자체인증서 .p12 파일 만드는법: </summary>
+
+  <br> 컴퓨터에 보통 JAVA가 설치되어 있다면 JDK도 설치되어있다. <br> 
+JDK 폴더의 'bin' 폴더 안에 **keytool.exe** 이라는 응용프로그램이 있을것이다. <br>
+**keytool.exe** 의 위치는 보통 **C:\Program Files\Java\jdk-<버전>\bin** 폴더 내부에 있다. 이것을 활용해 키 파일을(.p12 파일을) 만들어 스프링에서 활용하는 것이다. <br>
+이 exe파일이 컴퓨터에 존재하는지 확인하는 방법 중 하나는, <br>
+터미널을 키고 **keytool -version** 명령어를 쳐봤을때 버전이 출력이 되는지 확인하는 것이다. <br>
+출력 된다면 해당 'bin' 폴더가 환경 변수(path)로 시스템에 등록되어 있으며 exe 파일이 존재하는 것이고, 이 경우 더 짧은 명령어로 파일을 생성할 수 있다. 아닌 경우의 방법도 하단에 적혀있다.
+<br><br>
+
+
+### 아래에서, 해당되는 경우의 명령어를 복사하여 터미널에 입력한다. 그러면 터미널이 열린 폴더에 (springTestKeyStore.p12) 파일이 생성 될것이다.
+
+<br><br>
+
+### (1) 터미널에서 'keytool -version' 명령어를 쳤을때 출력되는 경우(즉 bin폴더가 환경 변수(path)에 등록되어 있는 경우)
+
+```
+keytool -genkeypair -alias springTestKeyStore -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore springTestKeyStore.p12 -validity 3 -storepass 123123 -keypass 123123 -dname "CN=localhost, OU=Dev, O=MyCompany, L=Seoul, ST=Seoul, C=KR"
+```
+
+<br><br>
+
+이렇게 하면, 터미널이 열린 폴더에 (springTestKeyStore.p12) 파일이 생길것이다. <br>
+그 파일을 스프링의 resources 폴더에 놓으면 .p12 파일 준비는 끝난것이다.
+
+
+<br><br><br>
+
+
+그런데 만약 출력되지 않은 경우는,
+**keytool.exe** 파일이 있는 곳에 가서 경로를 직접 확인하면 된다. <br>
+대부분 **C:\Program Files\Java\jdk-<버전>\bin** 이라는 경로에 **keytool.exe** 이 존재한다.
+(만약 없다면 인터넷에서 jdk를 검색해 설치하면 된다.)
+그리고 이 경로를 복사해놓고, 아래 명령어의 '[바꾸기...]' 부분을 지우고 복사한 경로를 붙여넣어 실행한다.
+
+### (2) 터미널에서 'keytool -version' 명령어를 쳤을때 출력되지 않는 경우(즉 bin폴더가 환경 변수(path)에 등록되어 있지 않은 경우)
+
+### (2-1) 터미널 종류가 파워쉘 인 경우
+```
+& "[바꾸기. 자신의 keytool.exe가 위치한 경로를 적기. 예시=>C:\Program Files\Java\jdk-21\bin]\keytool.exe" `
+  -genkeypair `
+  -alias springTestKeyStore `
+  -keyalg RSA `
+  -keysize 2048 `
+  -storetype PKCS12 `
+  -keystore springTestKeyStore.p12 `
+  -validity 3 `
+  -storepass 123123 `
+  -keypass 123123 `
+  -dname "CN=localhost, OU=Dev, O=MyCompany, L=Seoul, ST=Seoul, C=KR"
+```
+
+### (2-2) 터미널 종류가 bash 인 경우
+```
+"[바꾸기. 자신의 keytool.exe가 위치한 경로를 적기. 예시=>/c/Program Files/Java/jdk-21/bin]/keytool" \
+  -genkeypair \
+  -alias springTestKeyStore \
+  -keyalg RSA \
+  -keysize 2048 \
+  -storetype PKCS12 \
+  -keystore springTestKeyStore.p12 \
+  -validity 3 \
+  -storepass 123123 \
+  -keypass 123123 \
+  -dname "CN=localhost, OU=Dev, O=MyCompany, L=Seoul, ST=Seoul, C=KR"
+```
+
+이렇게 위의 크게 3가지 경우중 하나를 진행하면, <br>
+터미널이 열린 폴더에 (springTestKeyStore.p12) 파일이 생길것이다. <br>
+그 파일을 스프링의 resources 폴더에 놓으면 .p12 파일 준비는 끝난것이다.
+
+</details>
+
+<br>
+--- 
+
+
+2-3.(선택) 구글 오아스 로그인 기능을 원할 경우 => 사용자가 Google Cloud Console에서, 구글 OAuth2 client-id와 client-secret을 발급받아 yml 파일에 적어주기.(안한다면 폼 로그인 기능만 사용 가능)
+
+<br>
 
 3.사용자 컴퓨터의 6379 포트에서 redis가 실행되고 있어야함.(Dokcer로 활용 가능) <br>
-4.(선택) 구글 오아스 로그인 기능을 원할 경우 => 사용자가 Google Cloud Console에서, 구글 OAuth2 client-id와 client-secret을 발급받아 yml 파일에 적어주기.(안한다면 폼 로그인 기능만 사용 가능) <br>
 
 </details>
 

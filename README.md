@@ -34,13 +34,13 @@
 ### ⚙️ 현재 프로젝트 복사시 앱 구동에 필요한 환경 설정들
 
 <details>
-<summary> 현재 프로젝트 복사시 앱 구동에 필요한 환경 설정들 </summary>
+<summary> 현재 프로젝트 복사시 앱 구동에 필요한 환경 설정들 (클릭) </summary>
 
 <br><br>
 
-1.사용자 컴퓨터에 데이터베이스 MySQL이 (또는 다른 데이터베이스가) 설치되어 있어야함. (Docker로 실행 가능) <br><br>
-2.사용자 컴퓨터의 redis가 실행되고 있어야함. (Dokcer로 실행 가능) <br><br>
-3.Https 설정을 위해 개발용 임시 자체인증서 파일을 스프링의 resources 폴더에 놓기. <br>
+**1.** 사용자 컴퓨터에 데이터베이스 MySQL이 (또는 다른 데이터베이스가) 설치되어 있어야함. (Docker로 실행 가능) <br><br>
+**2.** 사용자 컴퓨터의 redis가 실행되고 있어야함. (Dokcer로 실행 가능) <br><br>
+**3.** Https 설정을 위해 개발용 임시 자체인증서 파일을 스프링의 resources 폴더에 놓기. <br>
 => 자체인증서 파일은 직접 만들거나, <br>
 이 깃허브 저장소에서 'springTestKeyStore.p12' 파일을 (작성자가 미리 만들어놓은 파일을) 다운로드 받으면 된다.
 <details>
@@ -56,7 +56,7 @@ JDK 폴더의 'bin' 폴더 안에 **keytool.exe** 이라는 응용프로그램�
 
 **아래에서 해당되는 경우의 명령어를 복사하여, 터미널에 입력한다. 그러면 터미널이 열린 폴더에 (springTestKeyStore.p12) 파일이 생성될것이다.**
 
-<br><br>
+<br>
 
 ### (1) 터미널에서 'keytool -version' 명령어를 쳤을때 출력되는 경우(즉 bin폴더가 환경 변수(path)에 등록되어 있는 경우)
 
@@ -118,9 +118,9 @@ keytool -genkeypair -alias springTestKeyStore -keyalg RSA -keysize 2048 -storety
 
 </details>
 
-<br><br><br><br>
+<br><br>
 
-4.밑의 코드를 복사한뒤, 스프링의 프로젝트 resources 폴더에 application.yml 파일 생성 후 붙여넣는다. 이렇게하면 설정파일로 등록된다. <br>
+**4.** 밑의 코드를 복사한뒤, 스프링의 프로젝트 resources 폴더에 application.yml 파일 생성 후 붙여넣는다. 이렇게하면 설정파일로 등록된다. <br>
 
 ```
 server:
@@ -207,11 +207,11 @@ cors:
 
 <br><br>
 
-5.위 yml 파일의 내용중 "[바꾸기 ...]" 또는 따로 변경할 부분을, 사용자 개인 상황에 맞게 변경한다.
+**5.** 위 yml 파일의 내용중 "[바꾸기 ...]" 또는 따로 변경할 부분을, 사용자 개인 상황에 맞게 변경한다.
 
 <br>
 
-6.(선택) 구글 오아스 로그인 기능을 원할 경우 =>
+**6.** (선택) 구글 오아스 로그인 기능을 원할 경우 =>
 <br>
 사용자가 Google Cloud Console 에서, 구글 OAuth2 'client-id'와 'client-secret'을 발급받아 yml 파일의 해당 부분을 바꿔준다. (안한다면 폼 로그인 기능만 사용 가능)
 

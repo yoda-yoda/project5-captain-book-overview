@@ -163,19 +163,66 @@
 
 <br>
 
-## 인증(Auth) 관련 API
+### 인증 관련 API
 ( AuthController )
 
 | Method | Endpoint                                        | Description                   |
 |--------|-------------------------------------------------|-------------------------------|
-| **GET**    | `/api/auth/me`      |  정식 사용자 인증을 위한 맵핑포인트이다. 인증이 성공적이면 유저 정보를 응답한다.              |
-| **GET**    | `/api/auth/ping`    | 시큐리티 필터로 인증 상태만 가볍게 체크할 목적의 맵핑포인트이다. |
+| **GET**    | `/api/auth/me`      | 정식 사용자 인증을 위한 맵핑포인트이다. 인증이 성공적이면 유저 정보를 응답한다. |
+| **GET**    | `/api/auth/ping`    | 시큐리티 필터로 회원 인증 상태만 가볍게 체크할 목적의 맵핑포인트이다. |
 | **POST**   | `/api/auth/refresh` | jwt refresh 토큰을 이용해 access 토큰을 재발급하는 엔드포인트이다. |
 | **POST**   | `/api/auth/logout`  | 엄격한 로그아웃 처리를 위한 맵핑포인트이다. 리프레시 토큰을 Redis 에서도 삭제하고, 응답으로 브라우저 쿠키에서도 리프레시 토큰을 삭제하도록 만든다. |
 
 ---
 
-</details>
+<br>
+
+### 달력 기능 관련 API
+( CalendarController )
+
+| Method | Endpoint                                        | Description                   |
+|--------|-------------------------------------------------|-------------------------------|
+| **GET**    | `/api/home`          | 해당 회원의 달력 리스트를 조회한다. |
+| **GET**    | `/api/calendar/{calendarId}` | 해당 회원의 특정 달력을 조회한다. | 
+| **POST**   | `/api/home` | 해당 회원의 특정 달력을 저장한다. |
+| **PUT**   | `/api/calendar/update/{calendarId}` | 해당 회원의 특정 달력을 수정한다. |
+| **DELETE**   | `/api/calendar/delete/{calendarResponseDtoId}`  | 해당 회원의 특정 달력을 삭제한다. |
+
+---
+
+<br>
+
+### 아이템 기능 관련 API
+( CalendarItemController )
+
+| Method | Endpoint                                        | Description                   |
+|--------|-------------------------------------------------|-------------------------------|
+| **GET**    | `/api/calendar/{calendarId}/item`      | 해당 회원 특정 달력의 아이템 리스트를 조회한다. |
+| **GET**    | `/api/calendar/{calendarId}/item/{calendarItemId}`    | 해당 회원 특정 달력의 특정 아이템을 조회한다. | 
+| **POST**   | `/api/calendar/{calendarId}/item` | 해당 회원 특정 달력의 특정 아이템을 저장한다. |
+| **PUT**   | `/api/calendar/item/{calendarItemId}/update`  | 해당 회원 특정 달력의 특정 아이템을 수정한다. |
+| **DELETE**   | `/api/calendar/item/{calendarItemId}/delete`  | 해당 회원 특정 달력의 특정 아이템을 삭제한다. |
+
+---
+
+
+<br>
+
+### 사용자(멤버) 기능 관련 API
+( MemberController )
+
+| Method | Endpoint                                        | Description                   |
+|--------|-------------------------------------------------|-------------------------------|
+| **GET**    | `/api/members/exits`      |  폼 회원 가입시 중복 아이디가 있는지 체크하는 맵핑포인트이다. |
+| **GET**    | `/api/members`    | DB에 저장된 모든 회원 리스트를 조회(응답)한다. |    
+| **GET**    | `/api/members/{memberId}`    | DB에 저장된 특정 회원을 조회(응답)한다. |    
+| **POST**   | `/api/members` | 폼 회원 가입 맵핑포인트이다. DB에 특정 폼 회원 정보를 저장한다. |
+| **PUT**   | `/api/members/update/{memberId}`  | 특정 회원의 정보를 수정한다. |
+| **DELETE**   | `/api/members/delete/{memberResponseDtoId}`  | 특정 회원의 정보를 삭제한다. |
+
+---
+
+
 
 [▲개요로 스크롤](#개요)
 

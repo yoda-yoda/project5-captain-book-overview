@@ -4,6 +4,16 @@
 
 <img width="350" height="350" alt="DaeJangBu-radius-logo" src="https://github.com/user-attachments/assets/cb7f16af-1c36-4f55-b2e9-54b7f24ff938" />
 
+---
+
+### 리포지터리 링크
+
+* **소개 링크 :** https://github.com/yoda-yoda/project5-captain-book-overview
+* **backend (spring) :** https://github.com/yoda-yoda/project5-captain-book-backend
+* **frontend (react) :** https://github.com/yoda-yoda/project5-captain-book-frontend
+
+<br>
+
 <br><br>
 
 ### 🔅 이 프로젝트에서 중점을 둔것
@@ -298,16 +308,6 @@ cors:
 <br>
 
 ---
-
-### 리포지터리 링크
-
-* **소개 링크 :** https://github.com/yoda-yoda/project5-captain-book-overview
-* **backend (spring) :** https://github.com/yoda-yoda/project5-captain-book-backend
-* **frontend (react) :** https://github.com/yoda-yoda/project5-captain-book-frontend
-
-<br>
-
----
 <br>
 
 ### 📜주제
@@ -434,9 +434,9 @@ cors:
 
 <br><br><br>
 
----
-
 [▲위로 스크롤](#5차-프로젝트---대장부captain-book-개인프로젝트-captain-book-project)
+
+---
 
 <br>
 

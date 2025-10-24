@@ -8,8 +8,8 @@
 
 ### 리포지터리 링크
 
-* **소개 링크 :** https://github.com/yoda-yoda/project5-captain-book-overview
 * **트러블 슈팅 :** https://github.com/yoda-yoda/project5-captain-book-trouble-shooting
+* **소개 링크 :** https://github.com/yoda-yoda/project5-captain-book-overview
 * **backend (spring) :** https://github.com/yoda-yoda/project5-captain-book-backend
 * **frontend (react) :** https://github.com/yoda-yoda/project5-captain-book-frontend
 
